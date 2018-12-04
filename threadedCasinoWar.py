@@ -108,7 +108,7 @@ class Player:  # Player class contains a corresponding players card and how much
         return "Player #%i has %s, and $%.2f" % (self.id, self.card, self.money)
 
     def makeBet(self):  # method randomly assigns a bet value and subtracts it from the players total money
-        betAmount = random.randint(1, self.money + 1)
+        betAmount = random.randint(1, int(self.money) + 1)
         self.money -= betAmount
         self.bet = betAmount
         print("Player #%i has made a $%.2f bet" % (self.id, self.bet))
